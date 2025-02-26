@@ -1,14 +1,15 @@
 import React, { useContext } from "react";
 import themeContext from "../contexts/ThemeContext";
 
-const ChangeTheme = () => {
+const Footer = (props) => {
   const { theme, toggleTheme } = useContext(themeContext);
   return (
     <div>
-      <p>Active Theme: {theme} </p>
-      <button onClick={toggleTheme}>ChangeTheme</button>
+      <hr />
+      <p>Active Theme: {theme}</p>
+      <button onClick={toggleTheme}>Change Theme</button>
     </div>
   );
 };
 
-export default ChangeTheme;
+export default Footer;
