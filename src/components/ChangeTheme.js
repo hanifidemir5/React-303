@@ -1,8 +1,7 @@
 import React, { useContext } from "react";
-import themeContext from "../contexts/ThemeContext";
-
+import ThemeContext from "../contexts/ThemeContext";
 const ChangeTheme = () => {
-  const { theme, toggleTheme } = useContext(themeContext);
+  const { theme, toggleTheme } = useContext(ThemeContext);
   return (
     <div>
       <p>Active Theme: {theme} </p>
