@@ -4,7 +4,7 @@ import ThemeContext from "../contexts/ThemeContext";
 
 const Footer = (props) => {
   const { theme, toggleTheme } = useContext(ThemeContext);
-  const { lang, setLang } = useContext(LangContext);
+  const { lang } = useContext(LangContext);
 
   return (
     <div>
