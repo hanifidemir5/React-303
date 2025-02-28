@@ -8,7 +8,7 @@ const Footer = (props) => {
 
   return (
     <div>
-      <Link to={"/"} style={{ position: "absolute", top: "1rem", right: "1rem" }}>
+      <Link to={"/"} className="main-page-button navigation-link">
         Main Page
       </Link>
       <hr />

@@ -19,7 +19,7 @@ body {
   color: black;
 }
 
-a {
+.navigation-link {
   padding: 1rem;
   border-radius: 1rem;
   border-width: 3px;
@@ -31,8 +31,14 @@ a {
   transition: all 0.5s ease;
 }
 
-a:hover {
+.navigation-link:hover {
   scale: 1.1;
   background-color: black;
   color: white;
+}
+
+.main-page-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
