@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 const ToDoContext = createContext();
 
 export const ToDoProvider = ({ children }) => {
+  const [filter, setActiveFilter] = useState("all");
   const [todos, setTodos] = useState([
     {
       id: 1,
@@ -26,10 +27,9 @@ export const ToDoProvider = ({ children }) => {
     setTodos(cloned_todos);
   };
 
-  const removeTodo = (id) => {
+  const destroyTodo = (id) => {
     const cloned_todos = [...todos];
     const itemIndex = cloned_todos.findIndex((todo) => todo.id === id);
-    const item = todos[itemIndex];
     cloned_todos.splice(itemIndex, 1);
     setTodos(cloned_todos);
   };
@@ -37,9 +37,11 @@ export const ToDoProvider = ({ children }) => {
   const values = {
     todos,
     setTodos,
+    filter,
+    setActiveFilter,
     addTodo,
     toggleTodo,
-    removeTodo,
+    destroyTodo,
   };
 
   return <ToDoContext.Provider value={values}>{children}</ToDoContext.Provider>;
