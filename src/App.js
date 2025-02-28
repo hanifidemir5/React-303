@@ -1,14 +1,19 @@
 import "./styles.css";
-import { LangContextProvider } from "./contexts/LangContext";
-import { ThemeContextProvider } from "./contexts/ThemeContext";
-import Container from "./Container";
+import { BrowserRouter, Route, Routes } from "react-router";
+import MainPage from "./pages/MainPage";
+import ToDoApp from "./pages/ToDoApp";
+import StateManagementWithContextAPI from "./pages/stateManagementWithContextAPI";
 
 const App = () => (
-  <LangContextProvider>
-    <ThemeContextProvider>
-      <Container />
-    </ThemeContextProvider>
-  </LangContextProvider>
+  <BrowserRouter>
+    <Routes>
+      <Route path="/">
+        <Route index element={<MainPage />} />
+        <Route element={<StateManagementWithContextAPI />} path="/stateManagementWithContextAPI" />
+        <Route element={<ToDoApp />} path="toDoApp" />
+      </Route>
+    </Routes>
+  </BrowserRouter>
 );
 
 export default App;

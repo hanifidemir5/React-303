@@ -3,7 +3,7 @@ import { useLang } from "../contexts/LangContext";
 const ChangeLang = () => {
   const { lang, setLang } = useLang();
   return (
-    <div>
+    <div className="text-2xl">
       <hr />
       <div>Active Language: {lang}</div>
       <button onClick={() => setLang("tr")}>TR</button>
