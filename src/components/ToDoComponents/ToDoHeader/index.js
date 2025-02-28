@@ -1,6 +1,6 @@
 import React from "react";
 import "../../../pages/ToDoApp/index.css";
-import HeaderForm from "./HeaderForm/HeaderForm";
+import HeaderForm from "./HeaderForm/";
 
 const ToDoHeader = (props) => {
   return (
