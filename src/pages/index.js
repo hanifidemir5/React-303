@@ -14,6 +14,9 @@ const LandingPage = (props) => {
       <Link to={"/SCONPMJS"} className="navigation-link">
         SCONPMJS
       </Link>
+      <Link to={"/UnitTesting"} className="navigation-link">
+        Unit Testing
+      </Link>
     </div>
   );
 };

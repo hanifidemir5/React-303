@@ -1,15 +1,13 @@
 import "./index.css";
-import { Link } from "react-router";
 import React from "react";
 import ExampleComponent from "../../components/SCONPMJSComponents/ExampleComponent";
 import ExampleButton from "../../components/SCONPMJSComponents/ExampleButton";
+import LandingPageButton from "../../components/LandingPageButton";
 
 const LibraryComponent = (props) => {
   return (
     <div>
-      <Link to={"/"} className="main-page-button navigation-link">
-        Main Page
-      </Link>
+      <LandingPageButton />
       <ExampleComponent text={"Merhaba"} />
       <ExampleButton text="click" onClick={() => alert("alert")} />
     </div>

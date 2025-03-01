@@ -5,6 +5,7 @@ import ToDoApp from "./pages/ToDoApp";
 import StateManagementWithContextAPI from "./pages/StateManagementWithContextAPI";
 import { ToDoProvider } from "./contexts/ToDoContext";
 import SCONPMJS from "./pages/SharingComponentsonNPMJS";
+import UnitTesting from "./pages/UnitTesting";
 const App = () => (
   <BrowserRouter>
     <Routes>
@@ -21,6 +22,7 @@ const App = () => (
         />
       </Route>
       <Route element={<SCONPMJS />} path="SCONPMJS" />
+      <Route element={<UnitTesting />} path="UnitTesting" />
     </Routes>
   </BrowserRouter>
 );
