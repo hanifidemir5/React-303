@@ -21,7 +21,10 @@ const TestTodo = (props) => {
   };
   return (
     <div>
-      <input value={text} onChange={(e) => setText(e.target.value)} />
+      <label htmlFor="testTodoInput">
+        Text
+        <input value={text} id="testTodoInput" name="testTodoInput" onChange={(e) => setText(e.target.value)} />
+      </label>
       <button onClick={addItem}>Add Item</button>
       <br />
       <br />

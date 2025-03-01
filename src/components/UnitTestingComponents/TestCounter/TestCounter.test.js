@@ -7,6 +7,7 @@ describe("Counter Tests", () => {
 
   beforeEach(() => {
     console.log("I am giong to work before every test case.");
+    // eslint-disable-next-line testing-library/no-render-in-setup
     render(<Counter />); // Forbidden usage, it is recommended to render related components in each test case.
     increaseButton = screen.getByText("Increase");
     decreaseButton = screen.getByText("Decrease");
