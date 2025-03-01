@@ -1,4 +1,4 @@
-import { useLang } from "../contexts/LangContext";
+import { useLang } from "../../contexts/LangContext";
 
 const ChangeLang = () => {
   const { lang, setLang } = useLang();

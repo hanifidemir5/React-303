@@ -1,6 +1,6 @@
-import ChangeTheme from "./components/ChangeTheme";
-import Footer from "./components/Footer";
-import ChangeLang from "./components/ChangeLang";
+import ChangeTheme from "./components/StateManagementComponents/ChangeTheme";
+import Footer from "./components/StateManagementComponents/Footer";
+import ChangeLang from "./components/StateManagementComponents/ChangeLang";
 import { useTheme } from "./contexts/ThemeContext";
 
 const Container = (props) => {

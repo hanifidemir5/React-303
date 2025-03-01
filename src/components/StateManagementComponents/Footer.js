@@ -1,6 +1,6 @@
 import { Link } from "react-router";
-import { useLang } from "../contexts/LangContext";
-import { useTheme } from "../contexts/ThemeContext";
+import { useLang } from "../../contexts/LangContext";
+import { useTheme } from "../../contexts/ThemeContext";
 
 const Footer = (props) => {
   const { theme, toggleTheme } = useTheme();
