@@ -11,7 +11,7 @@ const LibraryComponent = (props) => {
         Main Page
       </Link>
       <ExampleComponent text={"Merhaba"} />
-      <ExampleButton text="click" />
+      <ExampleButton text="click" onClick={() => alert("alert")} />
     </div>
   );
 };
