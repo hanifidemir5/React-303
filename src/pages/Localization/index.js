@@ -6,9 +6,11 @@ import LandingPageButton from "../../components/LandingPageButton";
 const messages = {
   "tr-TR": {
     title: "Merhaba Dünya",
+    description: "{count} yeni mesajınız var",
   },
   "en-US": {
     title: "Hello World",
+    description: "You have {count} new messages",
   },
 };
 
@@ -24,6 +26,9 @@ const Localization = (props) => {
       <IntlProvider locale={locale} messages={messages[locale]}>
         <p>
           <FormattedMessage id="title" />
+        </p>
+        <p>
+          <FormattedMessage id="description" values={{ count: 5 }} />
         </p>
         <div>
           <button onClick={() => setLocale("en-US")}>EN</button>
