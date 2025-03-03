@@ -4,7 +4,7 @@ import { ThemeContextProvider } from "../../contexts/ThemeContext";
 import Container from "../../Container";
 import LandingPageButton from "../../components/LandingPageButton";
 
-const StateManagementWithContextApi = (props) => {
+const StateManagement = (props) => {
   return (
     <LangContextProvider>
       <ThemeContextProvider>
@@ -15,4 +15,4 @@ const StateManagementWithContextApi = (props) => {
   );
 };
 
-export default StateManagementWithContextApi;
+export default StateManagement;
