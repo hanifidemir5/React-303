@@ -6,11 +6,24 @@ import LandingPageButton from "../../components/LandingPageButton";
 
 const LibraryComponent = (props) => {
   return (
-    <div>
+    <>
       <LandingPageButton />
-      <ExampleComponent text={"Merhaba"} />
-      <ExampleButton text="click" onClick={() => alert("alert")} />
-    </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
+          gap: "1rem",
+          alignItems: "center",
+          width: "100%",
+          height: "100vh",
+          fontSize: "2rem",
+        }}
+      >
+        <ExampleComponent text={"Merhaba"} />
+        <ExampleButton text="Click" onClick={() => alert("alert")} />
+      </div>
+    </>
   );
 };
 
