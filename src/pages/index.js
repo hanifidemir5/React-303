@@ -17,6 +17,9 @@ const LandingPage = (props) => {
       <Link to={"/UnitTesting"} className="navigation-link">
         Unit Testing
       </Link>
+      <Link to={"/localization"} className="navigation-link">
+        Localization
+      </Link>
     </div>
   );
 };
