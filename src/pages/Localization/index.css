@@ -5,6 +5,14 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  row-gap: 1rem;
+}
+
+.localization-container > p {
   font-size: 2rem;
-  gap: 1;
+}
+
+.localization-container > div {
+  display: flex;
+  gap: 1rem;
 }

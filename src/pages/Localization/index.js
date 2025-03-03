@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FormattedMessage, IntlProvider } from "react-intl";
 import "./index.css";
+import LandingPageButton from "../../components/LandingPageButton";
 
 const messages = {
   "tr-TR": {
@@ -12,18 +13,25 @@ const messages = {
 };
 
 const Localization = (props) => {
-  const [lang, setLang] = useState("en-US");
-
+  const isLocale = localStorage.getItem("locale");
+  const defaultLocale = isLocale ? isLocale : navigator.language;
+  const [locale, setLocale] = useState(defaultLocale);
+  useEffect(() => {
+    localStorage.setItem("locale", locale);
+  }, [locale]);
   return (
     <div className="localization-container">
-      <IntlProvider messages={messages[lang]}>
-        <FormattedMessage id="title" />
+      <IntlProvider locale={locale} messages={messages[locale]}>
+        <p>
+          <FormattedMessage id="title" />
+        </p>
         <div>
-          <button onClick={() => setLang("en-US")}>EN</button>
+          <button onClick={() => setLocale("en-US")}>EN</button>
 
-          <button onClick={() => setLang("tr-TR")}>TR</button>
+          <button onClick={() => setLocale("tr-TR")}>TR</button>
         </div>
       </IntlProvider>
+      <LandingPageButton />
     </div>
   );
 };
